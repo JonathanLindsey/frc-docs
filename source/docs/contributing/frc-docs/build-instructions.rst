@@ -33,10 +33,24 @@ Linux (Ubuntu)
 .. code-block:: console
 
     $ sudo apt update
-    $ sudo apt install python3 python3-pip
+    $ sudo apt install python3 python3-pip python3-tk
+    $ sudo apt install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk texlive-lang-greek texlive-luatex texlive-xetex texlive-fonts-extra dvipng librsvg2-bin
     $ python3 -m pip install -U pip setuptools wheel
     $ python3 -m pip install -r source/requirements.txt
-    $ sudo apt install -y texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk texlive-lang-greek texlive-luatex texlive-xetex texlive-fonts-extra dvipng librsvg2-bin
+
+If you get errors like:
+
+.. code-block:: console
+
+    WARNING: The script <package> is installed in '$HOME/.local/bin' which is not on PATH.
+    Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+when running the ``python3 -m pip`` commands above, run the following. The ``python3 -m pip`` commands do not need to be rerun. The ``$PATH:`` and double angle brackets (``>>``) are very import to be run exactly as shown to not corrupt your system.
+
+.. code-block:: console
+
+    $ echo export PATH=$PATH:$HOME/.local/bin >> .bashrc
+    $ source .bashrc
 
 Building
 --------
