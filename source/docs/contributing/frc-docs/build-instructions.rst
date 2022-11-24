@@ -8,49 +8,49 @@ Prerequisites
 
 Ensure that `Git <https://git-scm.com/>`__ is installed and that the frc-docs repository is cloned by using ``git clone https://github.com/wpilibsuite/frc-docs.git``.
 
-Windows
-^^^^^^^
+.. tabs::
 
-.. note:: MikTeX and ``rsvg-convert`` are not required for building HTML, they are only required for Windows PDF builds.
+    .. group-tab:: Windows
 
-- `Python 3.9 <https://www.python.org/downloads/>`__
-- `MiKTeX <https://miktex.org/download>`__ (Only needed for PDF builds)
-- `Perl <https://strawberryperl.com/>`__
-- `rsvg-convert <https://community.chocolatey.org/packages/rsvg-convert>`__
+        .. note:: MikTeX and ``rsvg-convert`` are not required for building HTML, they are only required for Windows PDF builds.
 
-Ensure that Python is in your Path by selecting the **Add Python to PATH** toggle when installing Python.
+        - `Python 3.9 <https://www.python.org/downloads/>`__
+        - `MiKTeX <https://miktex.org/download>`__ (Only needed for PDF builds)
+        - `Perl <https://strawberryperl.com/>`__
+        - `rsvg-convert <https://community.chocolatey.org/packages/rsvg-convert>`__
 
-.. image:: images/python-path.png
-    :alt: Showing where to click the box to add Python to PATH.
+        Ensure that Python is in your Path by selecting the **Add Python to PATH** toggle when installing Python.
 
-Once Python is installed, open up Powershell. Then navigate to the frc-docs directory. Run the following command: ``pip install -r source/requirements.txt``
+        .. image:: images/python-path.png
+            :alt: Showing where to click the box to add Python to PATH.
 
-Install the missing MikTex packages by navigating to the frc-docs directory, then running the following command from Powershell: ``mpm --verbose --require=@miktex-packages.txt``
+        Once Python is installed, open up Powershell. Then navigate to the frc-docs directory. Run the following command: ``pip install -r source/requirements.txt``
 
-Linux (Ubuntu)
-^^^^^^^^^^^^^^
+        Install the missing MikTex packages by navigating to the frc-docs directory, then running the following command from Powershell: ``mpm --verbose --require=@miktex-packages.txt``
 
-.. code-block:: console
+    .. group-tab:: Linux (Ubuntu)
 
-    $ sudo apt update
-    $ sudo apt install python3 python3-pip python3-tk
-    $ sudo apt install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk texlive-lang-greek texlive-luatex texlive-xetex texlive-fonts-extra dvipng librsvg2-bin
-    $ python3 -m pip install -U pip setuptools wheel
-    $ python3 -m pip install -r source/requirements.txt
+        .. code-block:: console
 
-If you get errors like:
+            $ sudo apt update
+            $ sudo apt install python3 python3-pip python3-tk
+            $ sudo apt install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk texlive-lang-greek texlive-luatex texlive-xetex texlive-fonts-extra dvipng librsvg2-bin
+            $ python3 -m pip install -U pip setuptools wheel
+            $ python3 -m pip install -r source/requirements.txt
 
-.. code-block:: console
+        If you get errors like:
 
-    WARNING: The script <package> is installed in '$HOME/.local/bin' which is not on PATH.
-    Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+        .. code-block:: console
 
-when running the ``python3 -m pip`` commands above, run the following. The ``python3 -m pip`` commands do not need to be rerun. The ``$PATH:`` and double angle brackets (``>>``) are very import to be run exactly as shown to not corrupt your system.
+            WARNING: The script <package> is installed in '$HOME/.local/bin' which is not on PATH.
+            Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 
-.. code-block:: console
+        when running the ``python3 -m pip`` commands above, run the following. The ``python3 -m pip`` commands do not need to be rerun. The ``$PATH:`` and double angle brackets (``>>``) are very import to be run exactly as shown to not corrupt your system.
 
-    $ echo export PATH=$PATH:$HOME/.local/bin >> .bashrc
-    $ source .bashrc
+        .. code-block:: console
+
+            $ echo export PATH=$PATH:$HOME/.local/bin >> .bashrc
+            $ source .bashrc
 
 Building
 --------
