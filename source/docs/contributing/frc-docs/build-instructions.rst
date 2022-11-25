@@ -12,7 +12,7 @@ Ensure that `Git <https://git-scm.com/>`__ is installed and that the frc-docs re
 
     .. group-tab:: Windows
 
-        - `Python 3.9 <https://www.python.org/downloads/>`__
+        - `Python 3 <https://www.python.org/downloads/>`__
         - `Perl <https://strawberryperl.com/>`__
         - `MiKTeX <https://miktex.org/download>`__ (Only needed for PDF builds)
         - `rsvg-convert <https://community.chocolatey.org/packages/rsvg-convert>`__ (Only needed for PDF builds)
