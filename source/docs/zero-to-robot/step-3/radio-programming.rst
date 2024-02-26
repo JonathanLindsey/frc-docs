@@ -40,6 +40,8 @@ Programmed Configuration
 .. image:: /docs/hardware/hardware-basics/images/status-lights/openmesh-radio-status-lights.png
   :alt: Lists the names of each of the status lights on the two legal radios.
 
+.. tip:: For details see the :ref:`Status Light Reference <docs/hardware/hardware-basics/status-lights-ref:OpenMesh Radio>`.
+
 The Radio Configuration Utility programs a number of configuration settings into the radio when run. These settings apply to the radio in all modes (including at events). These include:
 
 - Set a static IP of ``10.TE.AM.1``
@@ -67,7 +69,12 @@ At home only:
 - SSID may have a "Robot Name" appended to the team number to distinguish multiple networks.
 - Firewall option may be enabled to mimic the field firewall rules (open ports may be found in the Game Manual)
 
-.. warning:: It is not possible to modify the configuration manually.
+.. warning:: The OpenMesh OM5P radios are not manually configurable. However, the old DAP radios can be configured manually.
+
+  Credentials for the **old DAP radios only** are
+
+  - Username: ``root``
+  - Password: ``root``
 
 Install the Software
 --------------------
